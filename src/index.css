@@ -1,0 +1,196 @@
+@import "tailwindcss";
+body {
+  font-family: "Roboto";
+  /* background-color: #020617; */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins";
+}
+
+.after {
+  /* position:fixed; */
+  padding: -4px;
+}
+
+.after::after,
+.after2::after,
+.after3::after,
+.after4::after,
+.after5::after,
+.after5::before {
+  content: "";
+  background-color: rgb(87, 87, 255);
+  position: absolute;
+  left: 50%; /* positionne le côté gauche au milieu */
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+}
+.after2::after {
+  background-color: #a5a5a5;
+  height: 1px;
+}
+.after3::after {
+  width: 10%;
+}
+.after4::after {
+  width: 90%;
+  height: 1px;
+}
+
+.after5::after,
+.after5::before {
+  position: relative;
+  background-color: oklch(68.5% 0.169 237.323);
+  width: 15%;
+  /* left: -60px; */
+  top: 50%;
+  transform: translateY(-50%);
+}
+.after5::before {
+  /* left: 120px; */
+  background-color: red;
+}
+/* ligne dans certificat */
+/* Définition des pseudo-classes pour les lignes de connexion */
+/* --- 1. Ligne verticale centrale (Du conteneur principal) --- */
+.timeline::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 50%;
+  width: 2px; /* Epaisseur de la ligne */
+  margin-left: -1px; /* Centre la ligne */
+  background-color: #1447e6; /* Exemple de couleur pour border-light */
+}
+
+/* Gérer le mode sombre */
+.dark .timeline::before {
+  background-color: #4b5563; /* Exemple de couleur pour border-dark */
+}
+
+/* --- 2. Lignes horizontales (Du contenu vers le cercle) --- */
+/* Côté DROIT : Ligne sortant de la gauche du bloc de contenu */
+.timeline-content.right-content::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px; /* Distance entre la boîte de contenu et le cercle */
+  width: 20px;
+  height: 2px;
+  transform: translateY(-50%);
+  background-color: #1447e6; /* Même couleur que la ligne verticale */
+}
+
+/* Côté GAUCHE : Ligne sortant de la droite du bloc de contenu */
+.timeline-content.left-content::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20px; /* Distance entre la boîte de contenu et le cercle */
+  width: 20px;
+  height: 2px;
+  transform: translateY(-50%);
+  background-color: #1447e6;
+}
+
+/* --- Gérer les lignes horizontales en mode sombre --- */
+.dark .timeline-content.right-content::before,
+.dark .timeline-content.left-content::after {
+  background-color: #4b5563;
+}
+
+.typing {
+  display: inline-block; /* Permet de centrer l'élément inline-block */
+  overflow: hidden;
+  white-space: nowrap; /* Evite le retour à la ligne */
+  animation: typing 2s steps(30) forwards;
+  text-align: center; /* Centrage du texte à l'intérieur */
+}
+
+/* Animation */
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 23ch;
+  }
+}
+
+.words::after {
+  content: "Developpeur Front-End";
+  animation: words 6s infinite;
+  opacity: 1;
+}
+
+@keyframes words {
+  0%,
+  30% {
+    content: "Developpeur Front-End";
+    color: #00ff7f;
+  }
+  34%,
+  66% {
+    content: "Intégrateur Web";
+    color: #ff00ff;
+  }
+  70%,
+  100% {
+    content: "Developpeur Logiciel";
+    color: #ffd700;
+  }
+}
+
+/* animation */
+.fadeIn {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 1s ease-in, transform 1s ease-in;
+  will-change: opacity, transform;
+  background: transparent !important;
+  visibility: hidden;
+}
+.fadeIn2 {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1s ease-in, transform 1s ease-in !important;
+  visibility: hidden;
+}
+.fadeIn3 {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 1s ease-in, transform 1s ease-in !important;
+  visibility: hidden;
+}
+
+.fadeIn.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+.fadeIn2.visible {
+  opacity: 1;
+  transform: translateX(0);
+  visibility: visible;
+}
+.fadeIn3.visible {
+  opacity: 1;
+  transform: translateX(0);
+  visibility: visible;
+}
+
+/* Fleche */
+.fleche {
+  position: absolute;
+  left: 50%;
+  transform: translateX(50%);
+  background-color: red;
+}
