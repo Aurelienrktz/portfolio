@@ -15,6 +15,7 @@ const ListeProjets = [
     annee: "Octobre 2025",
     role: "Designer / Developeur Front-End",
     heberger: true,
+    lien: "https://carry-bot-sans-back.vercel.app/",
     git: "https://github.com/Aurelienrktz/CarryBot",
   },
   {
@@ -53,6 +54,7 @@ const ListeProjets = [
     annee: "Octobre 2025",
     role: "Designer / Developeur Front-End",
     heberger: true,
+    lien: "https://ourstation-sans-back.vercel.app/",
     git: "https://github.com/Aurelienrktz/parking",
   },
   {
@@ -90,9 +92,10 @@ const ListeProjets = [
     role: "Designer / Developeur Front-End",
     heberger: true,
     git: "https://github.com/Aurelienrktz/Make-it-shine",
+    lien: "https://make-it-shine.vercel.app/index.html",
   },
   {
-    titre: "E-commerce",
+    titre: "E-ketrika",
     tech: ["Java Script", "Html", "Css"],
     img: [
       "/image/e-commerce.PNG",
@@ -101,13 +104,14 @@ const ListeProjets = [
       "/image/e-commerce3.PNG",
     ],
     description:
-      "E-Commerce est un site de vente de téléphones présentant plusieurs modèles par marque, avec recherche et filtres pour une navigation facile et interactive.",
+      "E-ketrika est un site de vente de téléphones présentant plusieurs modèles par marque, avec recherche et filtres pour une navigation facile et interactive.",
     apropos:
-      "E-Commerce est un site de vente de téléphones, présentant plusieurs modèles regroupés par marque, avec une section “À propos” pour chaque marque, des fiches détaillées pour chaque téléphone incluant une petite anecdote, une barre de recherche et des options de filtrage par prix, date de sortie et autres critères, offrant une expérience utilisateur interactive et facile à naviguer, permettant de parcourir et filtrer les téléphones, découvrir des informations détaillées sur chaque modèle et naviguer aisément entre les marques et produits. Ce projet m'a permit de mettre en pratique mes connaissance en JS.",
+      "E-ketrika est un site de vente de téléphones, présentant plusieurs modèles regroupés par marque, avec une section “À propos” pour chaque marque, des fiches détaillées pour chaque téléphone incluant une petite anecdote, une barre de recherche et des options de filtrage par prix, date de sortie et autres critères, offrant une expérience utilisateur interactive et facile à naviguer, permettant de parcourir et filtrer les téléphones, découvrir des informations détaillées sur chaque modèle et naviguer aisément entre les marques et produits. Ce projet m'a permit de mettre en pratique mes connaissance en JS.",
     annee: "Septembre 2024",
     role: "Designer / Developeur Front-End",
-    heberger: false,
-    git: "https://github.com/Aurelienrktz/ECOMMERCE",
+    heberger: true,
+    git: "https://github.com/Aurelienrktz/E-ketrika",
+    lien: "https://eketrika-sans-back.vercel.app/",
   },
   {
     titre: "FBML",
@@ -125,7 +129,7 @@ const ListeProjets = [
     annee: "Juin 2023",
     role: "Designer / Developeur Front-End",
     heberger: false,
-    git: "#",
+    git: "https://github.com/Aurelienrktz",
   },
 ];
 
