@@ -40,7 +40,7 @@ const Hero = () => {
             </a>
             <a
               className=" flex items-center gap-1 font-medium border border-blue-500 text-white  p-2 md:px-2 md:py-3 rounded-md cursor-pointer hover:-translate-y-1.5 transition-all duration-300"
-              href="/fichier/cv.pdf"
+              href="/fichier/cvAurelienRakotozanaka.pdf"
               download
             >
               <svg
