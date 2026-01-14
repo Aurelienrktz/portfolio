@@ -1,0 +1,179 @@
+{
+  "hero": {
+    "welcome": "Bienvenue, je suis Aurelien",
+    "roles": [
+      "Développeur Front-End",
+      "Intégrateur Web",
+      "Développeur Logiciel"
+    ],
+    "projects": "Voir mes projets",
+    "cv": "Télécharger mon CV"
+  },
+  "about": {
+    "title": "À propos",
+    "subtitle": "J'aime créer des applications web modernes, centrées sur le confort de l’utilisateur et pensées pour durer.",
+    "description": "Je suis étudiant en Informatique à l'ISPM en 3ème année du parcours ESIIA. Entré dans le domaine de l'informatique en 2022, je transforme des idées en interfaces claires, performantes et intuitives.\n\nPassionné par le développement front-end et les technologies modernes, j’accorde une attention particulière à l’expérience utilisateur, à la qualité du code et à la maintenabilité des applications.\n\nJ’accorde une grande importance au design et à l’expérience utilisateur, car le design est selon moi la première impression qu’un utilisateur a d’une application.",
+    "philosophy": {
+      "title": "Philosophie",
+      "text": "Je crois en un développement propre, structuré et orienté utilisateur. Chaque ligne de code doit avoir un objectif clair : améliorer l’expérience, la performance et la lisibilité."
+    },
+    "skills": {
+      "title": "Compétences Focus",
+      "text": "Je me spécialise dans le développement front-end avec React, JavaScript et Tailwind CSS. J’ai également des compétences en C# et WPF, ce qui me permet d’avoir une vision globale du développement applicatif."
+    },
+    "collaboration": {
+      "title": "Collaboration",
+      "text": "J’apprécie le travail en équipe et les environnements collaboratifs. J’aime communiquer clairement, comprendre les besoins réels d’un projet et contribuer activement à sa réussite."
+    }
+  },
+  "parcours": {
+    "title": "Parcours Académique",
+    "items": [
+      {
+        "degree": "Licence 3 en informatique (en cours)",
+        "school": "Institut Supérieur Polytechnique de Madagascar",
+        "period": "2025 - 2026"
+      },
+      {
+        "degree": "Licence 2 en informatique",
+        "school": "Institut Supérieur Polytechnique de Madagascar",
+        "period": "2024 - 2025"
+      },
+      {
+        "degree": "Licence 1 en informatique",
+        "school": "Institut Supérieur Polytechnique de Madagascar",
+        "period": "2023 - 2024"
+      },
+      {
+        "degree": "Terminale Scientifique",
+        "school": "Lycée Jacques RABEMANANJARA",
+        "period": "2022 - 2023"
+      }
+    ]
+  },
+  "certificates": {
+    "title": "Certificats et Diplômes",
+    "csharp": {
+      "title": "Foundational C# with Microsoft",
+      "provider": "FreeCodeCamp",
+      "description": "Ce certificat valide les bases du langage C#, incluant la syntaxe, les variables, les boucles et la programmation orientée objet."
+    },
+    "algo": {
+      "title": "JavaScript Algorithms and Data Structures",
+      "provider": "FreeCodeCamp",
+      "description": "Ce certificat atteste la maîtrise de JavaScript, des structures de données et des algorithmes essentiels."
+    },
+    "responsive": {
+      "title": "Responsive Web Design",
+      "provider": "FreeCodeCamp",
+      "description": "Ce certificat prouve la capacité à concevoir des sites web adaptatifs pour tous les appareils."
+    },
+    "bac": {
+      "title": "Baccalauréat",
+      "school": "Lycée Jacques RABEMANANJARA",
+      "series": "Série :",
+      "seriesValue": "Scientifique",
+      "mention": "Mention :",
+      "mentionValue": "Assez-Bien",
+      "description": "Diplôme de fin d’études secondaires permettant l’accès à l’enseignement supérieur."
+    }
+  },
+  "techSkills": {
+    "title": "Compétences techniques",
+    "types": {
+      "frontend": "Front-End",
+      "tools": "Outils"
+    },
+    "levels": {
+      "beginner": "Débutant",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Vous avez des projets en tête ou juste besoin de dire salut ? Je suis toujours ouvert aux discussions de nouveaux projets, aux échanges ou à toute collaboration.",
+    "labels": {
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "github": "GitHub",
+      "location": "Localisation"
+    },
+    "location": "Cité Ankatso 2 Bloc-39",
+    "form": {
+      "title": "Envoyer un message",
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Envoyer",
+      "placeholders": {
+        "name": "Votre nom",
+        "email": "Votre email",
+        "message": "Votre message"
+      }
+    }
+  },
+  "footer": {
+    "rights": "© 2025 Aurelien Rakotozanaka. Tous droits réservés."
+  },
+  "projects": {
+    "sectionTitle": "Projets",
+    "viewCode": "Voir le code",
+    "viewSite": "Voir le site",
+    "techUsed": "Technologies utilisés",
+    "role": "Rôle",
+    "aboutProject": "A propos",
+
+    "carrybot": {
+      "description": "CarryBot est un robot mobile autonome conçu pour le transport d’objets.",
+      "about": "CarryBot est un projet académique visant à concevoir une solution intelligente et innovante pour automatiser le transport d’objets grâce à la robotique. Il combine le développement d’un robot mobile autonome et d’une application web permettant d’interagir avec le système.Le projet a pour objectif principal de faciliter les tâches de transport en milieu contrôlé en exploitant des technologies modernes telles que la programmation embarquée, les capteurs intelligents et les applications web.CarryBot est capable de se déplacer de manière autonome, de détecter et d’éviter les obstacles, tout en assurant un transport fiable et sécurisé des objets. Ce projet m’a permis de mettre en pratique des compétences en développement web, en robotique et en intégration matériel–logiciel, tout en travaillant sur un système complet allant de l’interface utilisateur jusqu’au contrôle du robot.",
+      "year": "Octobre 2025",
+      "role": "Designer / Développeur Front-End"
+    },
+
+    "movieflow": {
+      "description": "MovieFlow est une application web moderne pour découvrir des films et séries.",
+      "about": "MovieFlow est une application web dédiée à la découverte de films et de séries, conçue pour offrir une expérience utilisateur fluide et intuitive, exploitant une API de données cinématographiques afin de fournir des contenus populaires, des nouveautés et des recommandations, tout en proposant une navigation moderne, responsive et orientée expérience utilisateur, et ce projet m’a permis de renforcer mes compétences en développement front-end, notamment dans la gestion des API, l’architecture des composants, la navigation dynamique et l’optimisation des performances dans une application React.",
+      "year": "Décembre 2025",
+      "role": "Intégrateur / Développeur Front-End"
+    },
+
+    "ourstation": {
+      "description": "OurStation est une application de gestion de parking et de lavage automobile.",
+      "about": "OurStation est un projet de gestion de parking et de lavage automobile conçu pour optimiser l’organisation des véhicules et le suivi des services, en proposant une solution numérique centralisée facilitant la gestion des entrées et sorties, des prestations de lavage et des opérations courantes, tout en améliorant la fiabilité, la traçabilité et l’efficacité globale du système, et ce projet m’a permis de renforcer mes compétences en conception d’applications de gestion, en structuration des données et en développement de solutions orientées besoins réels.",
+      "year": "Octobre 2025",
+      "role": "Designer / Développeur Front-End"
+    },
+
+    "stockeo": {
+      "description": "Stock-EO est une application de gestion de stock développée en C# avec WPF.",
+      "about": "Stock-EO est une application de gestion de stock développée en C# avec WPF, conçue pour faciliter le suivi des produits et des quantités disponibles, intégrant un système d’alertes pour les niveaux de stock critiques et une organisation claire des données, offrant une solution fiable pour améliorer le contrôle, la visibilité et la gestion quotidienne des stocks, et ce projet m’a permis de renforcer mes compétences en développement desktop, en architecture applicative et en logique métier.",
+      "year": "Août 2025",
+      "role": "Designer / Développeur WPF"
+    },
+
+    "makeitshine": {
+      "description": "Make It Shine est un site vitrine pour une coiffeuse.",
+      "about": "C'est le premier projet qu'une cliente m'a demandé de réaliser, ce site présente les services d’une coiffeuse en mettant en avant ses réalisations de tresses, les tarifs de ses prestations et ses contacts, offrant une interface claire et agréable pour permettre aux visiteurs de découvrir facilement son travail et de prendre contact rapidement.",
+      "year": "Janvier 2025",
+      "role": "Designer / Développeur Front-End"
+    },
+
+    "eketrika": {
+      "description": "E-ketrika est un site de vente de téléphones avec filtres et recherche.",
+      "about": "E-ketrika est un site de vente de téléphones, présentant plusieurs modèles regroupés par marque, avec une section “À propos” pour chaque marque, des fiches détaillées pour chaque téléphone incluant une petite anecdote, une barre de recherche et des options de filtrage par prix, date de sortie et autres critères, offrant une expérience utilisateur interactive et facile à naviguer, permettant de parcourir et filtrer les téléphones, découvrir des informations détaillées sur chaque modèle et naviguer aisément entre les marques et produits. Ce projet m'a permit de mettre en pratique mes connaissance en JS.",
+      "year": "Septembre 2024",
+      "role": "Designer / Développeur Front-End"
+    },
+
+    "fbml": {
+      "description": "FBML est un site de présentation de recettes.",
+      "about": "Premier projet réalisé avec HTML et CSS en L1, FBML est un site de présentation de recettes regroupées par type (entrée, dessert, etc.), permettant de cliquer sur un plat pour consulter les ingrédients, le temps de cuisson et les étapes de préparation, offrant ainsi une interface simple et structurée pour naviguer facilement entre les recettes, découvrir de nouvelles idées culinaires et planifier la préparation des plats de manière claire et intuitive.",
+      "year": "Juin 2023",
+      "role": "Designer / Développeur Front-End"
+    }
+  },
+  "common": {
+    "viewProject": "Voir le projet"
+  }
+}

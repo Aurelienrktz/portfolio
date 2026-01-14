@@ -22,6 +22,7 @@ function App() {
   }, []);
   Animation();
 
+
   return (
     <div className="bg-slate-950/90 text-slate-200">
       <Header />

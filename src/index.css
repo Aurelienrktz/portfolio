@@ -1,7 +1,7 @@
 @import "tailwindcss";
 body {
   font-family: "Roboto";
-  /* background-color: #020617; */
+  overflow-x: hidden;
 }
 h1,
 h2,
@@ -148,6 +148,21 @@ h6 {
     color: #ffd700;
   }
 }
+/* MULTILANGUE */
+/* @keyframes words {
+  0%, 30% {
+    content: attr(data-text-1);
+    color: #00ff7f;
+  }
+  34%, 66% {
+    content: attr(data-text-2);
+    color: #ff00ff;
+  }
+  70%, 100% {
+    content: attr(data-text-3);
+    color: #ffd700;
+  }
+} */
 
 /* animation */
 .fadeIn {
@@ -194,3 +209,4 @@ h6 {
   transform: translateX(50%);
   background-color: red;
 }
+

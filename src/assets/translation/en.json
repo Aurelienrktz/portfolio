@@ -1,0 +1,175 @@
+{
+  "hero": {
+    "welcome": "Welcome, I'm Aurelien",
+    "roles": ["Front-End Developer", "Web Integrator", "Software Developer"],
+    "projects": "View my projects",
+    "cv": "Download my resume"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "I enjoy building modern web applications focused on user comfort and long-term quality.",
+    "description": "I am a third-year Computer Science student at ISPM, following the ESIIA program. I entered the tech field in 2022 and turn ideas into clean, efficient, and intuitive interfaces.\n\nPassionate about front-end development and modern technologies, I pay close attention to user experience, code quality, and application maintainability.\n\nI strongly value design and user experience, as design is often the first impression users have of an application.",
+    "philosophy": {
+      "title": "Philosophy",
+      "text": "I believe in clean, structured, and user-oriented development. Every line of code should have a clear purpose: improving experience, performance, and readability."
+    },
+    "skills": {
+      "title": "Core Skills",
+      "text": "I specialize in front-end development with React, JavaScript, and Tailwind CSS. I also have experience with C# and WPF, giving me a broader understanding of application development."
+    },
+    "collaboration": {
+      "title": "Collaboration",
+      "text": "I enjoy teamwork and collaborative environments where communication and learning are essential. I like understanding real project needs and contributing actively to success."
+    }
+  },
+  "parcours": {
+    "title": "Academic Background",
+    "items": [
+      {
+        "degree": "Bachelor's Degree in Computer Science – Year 3 (ongoing)",
+        "school": "Institut Supérieur Polytechnique de Madagascar",
+        "period": "2025 - 2026"
+      },
+      {
+        "degree": "Bachelor's Degree in Computer Science – Year 2",
+        "school": "Institut Supérieur Polytechnique de Madagascar",
+        "period": "2024 - 2025"
+      },
+      {
+        "degree": "Bachelor's Degree in Computer Science – Year 1",
+        "school": "Institut Supérieur Polytechnique de Madagascar",
+        "period": "2023 - 2024"
+      },
+      {
+        "degree": "Scientific Baccalaureate",
+        "school": "Jacques RABEMANANJARA High School",
+        "period": "2022 - 2023"
+      }
+    ]
+  },
+  "certificates": {
+    "title": "Certificates and Diplomas",
+    "csharp": {
+      "title": "Foundational C# with Microsoft",
+      "provider": "FreeCodeCamp",
+      "description": "This certificate validates the fundamentals of C#, including syntax, variables, loops, and object-oriented programming."
+    },
+    "algo": {
+      "title": "JavaScript Algorithms and Data Structures",
+      "provider": "FreeCodeCamp",
+      "description": "This certificate demonstrates proficiency in JavaScript, data structures, and essential algorithms."
+    },
+    "responsive": {
+      "title": "Responsive Web Design",
+      "provider": "FreeCodeCamp",
+      "description": "This certificate proves the ability to design responsive websites optimized for all devices."
+    },
+    "bac": {
+      "title": "Scientific Baccalaureate",
+      "school": "Jacques RABEMANANJARA High School",
+      "series": "Track:",
+      "seriesValue": "Science",
+      "mention": "Honors:",
+      "mentionValue": "Fairly good",
+      "description": "High school diploma certifying the completion of secondary education and access to higher studies."
+    }
+  },
+  "techSkills": {
+    "title": "Technical Skills",
+    "types": {
+      "frontend": "Front-End",
+      "tools": "Tools"
+    },
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Have a project in mind or just want to say hi? I’m always open to discussing new projects, exchanging ideas, or becoming part of your journey.",
+    "labels": {
+      "email": "Email",
+      "phone": "Phone",
+      "github": "GitHub",
+      "location": "Location"
+    },
+    "location": "Ankatso 2 District, Block 39",
+    "form": {
+      "title": "Send a message",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send",
+      "placeholders": {
+        "name": "Your name",
+        "email": "Your email",
+        "message": "Your message"
+      }
+    }
+  },
+  "footer": {
+    "rights": "© 2025 Aurelien Rakotozanaka. All rights reserved."
+  },
+  "projects": {
+    "sectionTitle": "Projects",
+    "viewCode": "View Code",
+    "viewSite": "View Site",
+    "techUsed": "Technologies Used",
+    "role": "Role",
+    "aboutProject": "About",
+
+    "carrybot": {
+      "description": "CarryBot is an autonomous mobile robot designed for transporting objects.",
+      "about": "CarryBot is an academic project aimed at designing an intelligent and innovative solution to automate object transportation using robotics. It combines the development of an autonomous mobile robot and a web application to interact with the system. The main goal is to facilitate transport tasks in controlled environments by leveraging modern technologies such as embedded programming, smart sensors, and web applications. CarryBot can move autonomously, detect and avoid obstacles, while ensuring reliable and safe transport of objects. This project allowed me to apply skills in web development, robotics, and hardware-software integration, working on a complete system from user interface to robot control.",
+      "year": "October 2025",
+      "role": "Designer / Front-End Developer"
+    },
+
+    "movieflow": {
+      "description": "MovieFlow is a modern web app to discover movies and series.",
+      "about": "MovieFlow is a web application dedicated to discovering movies and series, designed to provide a smooth and intuitive user experience, leveraging a movie data API to provide popular content, new releases, and recommendations, while offering modern, responsive, and user-oriented navigation. This project helped me strengthen my front-end development skills, particularly in API handling, component architecture, dynamic navigation, and performance optimization in a React application.",
+      "year": "December 2025",
+      "role": "Integrator / Front-End Developer"
+    },
+
+    "ourstation": {
+      "description": "OurStation is a parking and car wash management application.",
+      "about": "OurStation is a parking and car wash management project designed to optimize vehicle organization and service tracking, providing a centralized digital solution to manage entries and exits, car wash services, and daily operations, while improving system reliability, traceability, and overall efficiency. This project helped me strengthen my skills in designing management applications, structuring data, and developing solutions oriented toward real-world needs.",
+      "year": "October 2025",
+      "role": "Designer / Front-End Developer"
+    },
+
+    "stockeo": {
+      "description": "Stock-EO is a stock management application developed in C# with WPF.",
+      "about": "Stock-EO is a stock management application developed in C# with WPF, designed to facilitate tracking of products and available quantities, integrating an alert system for critical stock levels and clear data organization, providing a reliable solution to improve control, visibility, and daily stock management. This project helped me strengthen my skills in desktop development, application architecture, and business logic.",
+      "year": "August 2025",
+      "role": "Designer / WPF Developer"
+    },
+
+    "makeitshine": {
+      "description": "Make It Shine is a showcase website for a hairdresser.",
+      "about": "This was the first project requested by a client. The website presents the services of a hairdresser, highlighting braid creations, pricing, and contact information, providing a clear and pleasant interface to allow visitors to easily explore the work and quickly get in touch.",
+      "year": "January 2025",
+      "role": "Designer / Front-End Developer"
+    },
+
+    "eketrika": {
+      "description": "E-ketrika is a phone sales website with search and filters.",
+      "about": "E-ketrika is a phone sales website presenting multiple models grouped by brand, with an “About” section for each brand, detailed pages for each phone including anecdotes, a search bar, and filtering options by price, release date, and other criteria. It offers an interactive and easy-to-navigate user experience, allowing users to browse and filter phones, discover detailed information on each model, and navigate smoothly between brands and products. This project allowed me to apply my knowledge of JavaScript.",
+      "year": "September 2024",
+      "role": "Designer / Front-End Developer"
+    },
+
+    "fbml": {
+      "description": "FBML is a recipe presentation website.",
+      "about": "The first project realized with HTML and CSS in first year, FBML is a recipe presentation website grouped by type (starter, dessert, etc.), allowing users to click on a dish to see ingredients, cooking time, and preparation steps. It provides a simple and structured interface for easy navigation between recipes, discovering new culinary ideas, and planning meal preparation clearly and intuitively.",
+      "year": "June 2023",
+      "role": "Designer / Front-End Developer"
+    }
+  },
+  "common": {
+    "viewProject": "View Project"
+  }
+}

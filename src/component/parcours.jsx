@@ -1,57 +1,29 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Parcours = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className="pt-10 px-5 md:px-20  md:pt-15">
+    <div className="pt-10 px-5 md:px-20 md:pt-15">
       <h1 className="after3 relative font-bold pb-2 md:pb-5 text-xl md:text-2xl text-center fadeIn">
-        Parcours Académique
+        {t("parcours.title")}
       </h1>
-      <div className="after2 relative flex justify-between py-5 md:py-10 fadeIn3">
-        <span>
-          <p className="font-medium pb-4">
-            Licence 3 en informatique ( en cours )
+
+      {t("parcours.items", { returnObjects: true }).map((item, index) => (
+        <div
+          key={index}
+          className="after2 relative flex justify-between py-5 md:py-10 fadeIn3"
+        >
+          <span>
+            <p className="font-medium pb-4">{item.degree}</p>
+            <p className="font-light text-gray-400">{item.school}</p>
+          </span>
+          <p className="font-light text-gray-400 text-xs md:text-base">
+            {item.period}
           </p>
-          <p className="font-light text-gray-400">
-            Institut Supérieur Polytechnique de Madagascar
-          </p>
-        </span>
-        <p className="font-light text-gray-400 text-xs md:text-base">
-          2025 - 2026
-        </p>
-      </div>
-      <div className="after2 relative flex justify-between py-5 md:py-10  fadeIn3">
-        <span>
-          <p className="font-medium pb-4">Licence 2 en informatique</p>
-          <p className="font-light text-gray-400">
-            Institut Supérieur Polytechnique de Madagascar
-          </p>
-        </span>
-        <p className="font-light text-gray-400 text-xs md:text-base">
-          2024 - 2025
-        </p>
-      </div>
-      <div className="after2 relative flex justify-between py-5 md:py-10 fadeIn3">
-        <span>
-          <p className="font-medium pb-4">Licence 1 en informatique</p>
-          <p className="font-light text-gray-400">
-            Institut Supérieur Polytechnique de Madagascar
-          </p>
-        </span>
-        <p className="font-light text-gray-400 text-xs md:text-base">
-          2023 - 2024
-        </p>
-      </div>
-      <div className="after2 relative flex justify-between py-5 md:py-10  fadeIn3">
-        <span>
-          <p className="font-medium pb-4">Terminale Scientifique</p>
-          <p className="font-light text-gray-400">
-            Lycée Jacques RABEMANANJARA
-          </p>
-        </span>
-        <p className="font-light text-gray-400 text-xs md:text-base">
-          2022 - 2023
-        </p>
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
