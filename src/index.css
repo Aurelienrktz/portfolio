@@ -1,8 +1,9 @@
 @import "tailwindcss";
-html,
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: "Roboto";
-  overflow-x: hidden;
 }
 h1,
 h2,
@@ -209,4 +210,11 @@ h6 {
   left: 50%;
   transform: translateX(50%);
   background-color: red;
+}
+
+/* ANIMATION PARTICLE */
+.particles-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }

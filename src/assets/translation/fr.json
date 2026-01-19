@@ -1,10 +1,10 @@
 {
   "hero": {
-    "welcome": "Bienvenue, je suis Aurelien",
+    "welcome": "Bienvenue , je suis Aurelien",
     "roles": [
-      "Développeur Front-End",
-      "Intégrateur Web",
-      "Développeur Logiciel"
+      { "label": "Développeur Front-End", "color": "text-blue-400" },
+      { "label": "Intégrateur Web", "color": "text-purple-400" },
+      { "label": "Développeur Logiciel", "color": "text-emerald-400" }
     ],
     "projects": "Voir mes projets",
     "cv": "Télécharger mon CV"

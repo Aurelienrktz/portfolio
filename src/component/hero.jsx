@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-// import BackgroundParticles from "../assets/backgroundParticles";
+import i18n from "../assets/translation/translation";
+import Particles from "../assets/particles";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -11,20 +12,33 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length);
-    }, 2000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [words]);
 
   return (
     <>
-      <div className="relative overflow-hidden">
-        <div className="relative z-10 flex flex-col justify-center items-center gap-4 md:gap-8 py-10 md:pb-20 md:pt-15 fadeIn">
-          <h1 className="typing text-2xl md:text-4xl font-bold">
+      <div className="relative overflow-hidden ">
+        <div style={{ width: "100%", height: "600px", position: "relative" }}>
+          <Particles
+            particleColors={["#ffffff"]}
+            particleCount={200}
+            particleSpread={10}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover
+            alphaParticles={false}
+            disableRotation={false}
+            pixelRatio={1}
+          />
+        </div>
+        <div className="absolute inset-0 z-20 flex flex-col justify-center items-center gap-8 md:gap-16 fadeIn">
+          <h1 className="typing text-2xl md:text-6xl font-bold p-2">
             {t("hero.welcome")}
           </h1>
 
-          <h2 className="font-light text-neutral-400 text-xl">
-            {words[index]}
+          <h2 className={`font-bold text-xl md:text-3xl ${words[index].color}`}>
+            {words[index].label}
           </h2>
 
           <div className="flex justify-items-center gap-4">
@@ -33,42 +47,40 @@ const Hero = () => {
                 const projet = document.getElementById("projet");
                 projet?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="flex items-center gap-1 text-white font-medium bg-blue-500 p-2 md:px-2 md:py-3 rounded-md cursor-pointer hover:bg-blue-700 hover:-translate-y-1.5 transition-all duration-300"
+              className="flex items-center gap-1 text-white text-center font-medium bg-blue-500 p-1.5 md:px-2 md:py-3 rounded-md cursor-pointer hover:bg-blue-700 hover:-translate-y-1.5 transition-all duration-300"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="size-6"
+                className="size-6"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
-
               {t("hero.projects")}
             </a>
 
             <a
-              className="flex items-center gap-1 font-medium border border-blue-500 text-white p-2 md:px-2 md:py-3 rounded-md cursor-pointer hover:-translate-y-1.5 transition-all duration-300"
-              href="/fichier/cvAurelienRakotozanaka.pdf"
+              className="flex items-center gap-1 font-medium text-center border border-blue-500 text-white p-1.5 md:px-2 md:py-3 rounded-md cursor-pointer hover:-translate-y-1.5 transition-all duration-300"
+              href={`/fichier/cvRakotozanakaAurelien(${i18n.language}).pdf`}
               download
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="size-6"
+                className="size-6"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M12 2.25a.75.75 0 0 1 .75.75v11.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.22 3.22V3a.75.75 0 0 1 .75-.75Zm-9 13.5a.75.75 0 0 1 .75.75v2.25a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V16.5a.75.75 0 0 1 1.5 0v2.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V16.5a.75.75 0 0 1 .75-.75Z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
-
               {t("hero.cv")}
             </a>
           </div>

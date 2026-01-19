@@ -1,7 +1,11 @@
 {
   "hero": {
-    "welcome": "Welcome, I'm Aurelien",
-    "roles": ["Front-End Developer", "Web Integrator", "Software Developer"],
+    "welcome": "Welcome , I'm Aurelien",
+    "roles": [
+      { "label": "Front-End Developer", "color": "text-blue-400" },
+      { "label": "Web Integrator", "color": "text-purple-400" },
+      { "label": "Software Developer", "color": "text-emerald-400" }
+    ],
     "projects": "View my projects",
     "cv": "Download my resume"
   },
