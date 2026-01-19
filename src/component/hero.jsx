@@ -19,7 +19,7 @@ const Hero = () => {
   return (
     <>
       <div className="relative overflow-hidden ">
-        <div style={{ width: "100%", height: "600px", position: "relative" }}>
+        <div className="w-screen h-125 md:h-150 relative">
           <Particles
             particleColors={["#ffffff"]}
             particleCount={200}
@@ -32,8 +32,8 @@ const Hero = () => {
             pixelRatio={1}
           />
         </div>
-        <div className="absolute inset-0 z-20 flex flex-col justify-center items-center gap-8 md:gap-16 fadeIn">
-          <h1 className="typing text-2xl md:text-6xl font-bold p-2">
+        <div className="absolute backdrop-blur-[1px] shadow-[1px] bg-red-500 p-2 inset-0 flex flex-col justify-center items-center gap-12 md:gap-16 fadeIn">
+          <h1 className="typing md:h-20 text-3xl md:text-6xl font-bold">
             {t("hero.welcome")}
           </h1>
 

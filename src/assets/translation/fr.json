@@ -1,6 +1,6 @@
 {
   "hero": {
-    "welcome": "Bienvenue, je suis Aurelien",
+    "welcome": "Bienvenue , je suis Aurelien",
     "roles": [
       { "label": "Développeur Front-End", "color": "text-blue-400" },
       { "label": "Intégrateur Web", "color": "text-purple-400" },

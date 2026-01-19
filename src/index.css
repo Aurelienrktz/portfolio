@@ -110,20 +110,16 @@ h6 {
 }
 
 .typing {
-  display: inline-block; /* Permet de centrer l'élément inline-block */
-  overflow: hidden;
-  white-space: nowrap; /* Evite le retour à la ligne */
+  white-space: nowrap;
   animation: typing 2s steps(30) forwards;
-  text-align: center; /* Centrage du texte à l'intérieur */
 }
 
-/* Animation */
 @keyframes typing {
   from {
-    width: 0ch;
+    clip-path: inset(0 100% 0 0);
   }
   to {
-    width: 23ch;
+    clip-path: inset(0 0 0 0);
   }
 }
 
@@ -150,21 +146,6 @@ h6 {
     color: #ffd700;
   }
 }
-/* MULTILANGUE */
-/* @keyframes words {
-  0%, 30% {
-    content: attr(data-text-1);
-    color: #00ff7f;
-  }
-  34%, 66% {
-    content: attr(data-text-2);
-    color: #ff00ff;
-  }
-  70%, 100% {
-    content: attr(data-text-3);
-    color: #ffd700;
-  }
-} */
 
 /* animation */
 .fadeIn {
@@ -202,6 +183,14 @@ h6 {
   opacity: 1;
   transform: translateX(0);
   visibility: visible;
+}
+@media (max-width: 640px) {
+  .fadeIn2 {
+    transform: translateX(20px);
+  }
+  .fadeIn3 {
+    transform: translateX(-20px);
+  }
 }
 
 /* Fleche */
