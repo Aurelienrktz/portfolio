@@ -8,6 +8,7 @@ import TechSkills from "./component/techSkills";
 import Contact from "./component/contact";
 import Footer from "./component/footer";
 import Animation from "./assets/animation";
+import Chat from "./component/chat";
 
 function App() {
   const [fade, setFade] = useState(true);
@@ -22,7 +23,6 @@ function App() {
   }, []);
   Animation();
 
-
   return (
     <div className="bg-slate-950/90 text-slate-200">
       <Header />
@@ -33,6 +33,7 @@ function App() {
       <TechSkills />
       <Contact />
       <Footer />
+      <Chat />
     </div>
   );
 }
