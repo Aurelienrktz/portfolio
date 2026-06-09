@@ -19,10 +19,12 @@ const ProjectModale = ({ projet, open, onClose }) => {
           >
             ✕
           </h1>
+
           <div>
             <h1 className="font-bold text-xl md:text-2xl mb-2">
               {projet.titre}
             </h1>
+
             <h2 className="text-xs text-neutral-300">
               {t(`projects.${projet.id}.year`)}
             </h2>
@@ -77,6 +79,7 @@ const ProjectModale = ({ projet, open, onClose }) => {
             </div>
 
             <h1 className="text-xl mb-2">{t("projects.techUsed")}</h1>
+
             <div className="flex gap-3 items-center flex-wrap mb-4">
               {projet.tech.map((tech, i) => (
                 <h1
@@ -102,6 +105,7 @@ const ProjectModale = ({ projet, open, onClose }) => {
             <h1 className="relative after pb-4 text-xl">
               {t("projects.aboutProject")}
             </h1>
+
             <p className="pt-4 text-neutral-400">
               {t(`projects.${projet.id}.about`)}
             </p>

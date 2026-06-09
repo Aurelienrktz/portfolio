@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
 html {
   overflow-x: hidden;
 }
@@ -52,58 +54,50 @@ h6 {
   position: relative;
   background-color: oklch(68.5% 0.169 237.323);
   width: 15%;
-  /* left: -60px; */
   top: 50%;
   transform: translateY(-50%);
 }
 .after5::before {
-  /* left: 120px; */
   background-color: red;
 }
-/* ligne dans certificat */
-/* Définition des pseudo-classes pour les lignes de connexion */
-/* --- 1. Ligne verticale centrale (Du conteneur principal) --- */
+
+/* certificat */
 .timeline::before {
   content: "";
   position: absolute;
   inset: 0;
   left: 50%;
-  width: 2px; /* Epaisseur de la ligne */
-  margin-left: -1px; /* Centre la ligne */
-  background-color: #1447e6; /* Exemple de couleur pour border-light */
+  width: 2px;
+  margin-left: -1px;
+  background-color: #1447e6;
 }
 
-/* Gérer le mode sombre */
 .dark .timeline::before {
-  background-color: #4b5563; /* Exemple de couleur pour border-dark */
+  background-color: #4b5563;
 }
 
-/* --- 2. Lignes horizontales (Du contenu vers le cercle) --- */
-/* Côté DROIT : Ligne sortant de la gauche du bloc de contenu */
 .timeline-content.right-content::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: -20px; /* Distance entre la boîte de contenu et le cercle */
-  width: 20px;
-  height: 2px;
-  transform: translateY(-50%);
-  background-color: #1447e6; /* Même couleur que la ligne verticale */
-}
-
-/* Côté GAUCHE : Ligne sortant de la droite du bloc de contenu */
-.timeline-content.left-content::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -20px; /* Distance entre la boîte de contenu et le cercle */
+  left: -20px;
   width: 20px;
   height: 2px;
   transform: translateY(-50%);
   background-color: #1447e6;
 }
 
-/* --- Gérer les lignes horizontales en mode sombre --- */
+.timeline-content.left-content::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 20px;
+  height: 2px;
+  transform: translateY(-50%);
+  background-color: #1447e6;
+}
+
 .dark .timeline-content.right-content::before,
 .dark .timeline-content.left-content::after {
   background-color: #4b5563;
@@ -206,4 +200,28 @@ h6 {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+/* SCROLL */
+/* Custom Scrollbar pour le Chat */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px; /* Très fin */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Fond invisible */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.3); /* Gris discret et transparent */
+  border-radius: 20px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.5); /* S'assombrit légèrement au survol */
+}
+
+/* Version Mode Sombre */
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.2);
 }

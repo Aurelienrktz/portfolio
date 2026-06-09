@@ -1,5 +1,34 @@
 const ListeProjets = [
   {
+    id: "mateo",
+    titre: "MATEO",
+    tech: ["Node JS", "LLM", "RAG", "n8n", "Docker"],
+    img: [
+      "/image/mateo1.PNG",
+      "/image/mateo2.PNG",
+      "/image/mateo3.PNG",
+      "/image/mateo4.PNG",
+      "/image/mateo5.PNG",
+    ],
+    heberger: false,
+    lien: "https://carry-bot-sans-back.vercel.app/",
+    git: "https://github.com/Aurelienrktz/chatbot",
+  },
+  {
+    id: "mateo_interne_odoo",
+    titre: "AGENT IA",
+    tech: ["Node JS", "LLM", "RAG", "n8n", "Docker"],
+    img: [
+      "/image/interne1.PNG",
+      "/image/interne2.PNG",
+      "/image/interne3.PNG",
+      "/image/interne4.PNG",
+    ],
+    heberger: false,
+    lien: "https://carry-bot-sans-back.vercel.app/",
+    git: "https://github.com/Aurelienrktz/chatbot_2",
+  },
+  {
     id: "carrybot",
     titre: "CARRYBOT",
     tech: ["React JS", "Django", "Arduino"],

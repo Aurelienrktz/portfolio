@@ -8,7 +8,7 @@ import TechSkills from "./component/techSkills";
 import Contact from "./component/contact";
 import Footer from "./component/footer";
 import Animation from "./assets/animation";
-import Chat from "./component/chat";
+import ChatBot from "./component/chatBot";
 
 function App() {
   const [fade, setFade] = useState(true);
@@ -24,7 +24,15 @@ function App() {
   Animation();
 
   return (
-    <div className="bg-slate-950/90 text-slate-200">
+    <div
+      className="
+      bg-gradient-to-br
+ from-zinc-50 via-white/50 to-zinc-100 dark:from-slate-800 dark:via-slate-900 dark:to-blue-950
+
+      text-slate-800
+      dark:text-slate-200
+      "
+    >
       <Header />
       <Hero />
       <Parcours />
@@ -33,7 +41,7 @@ function App() {
       <TechSkills />
       <Contact />
       <Footer />
-      <Chat />
+      <ChatBot />
     </div>
   );
 }

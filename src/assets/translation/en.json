@@ -2,9 +2,21 @@
   "hero": {
     "welcome": "Welcome , I'm Aurelien",
     "roles": [
-      { "label": "Front-End Developer", "color": "text-blue-400" },
-      { "label": "Web Integrator", "color": "text-purple-400" },
-      { "label": "Software Developer", "color": "text-emerald-400" }
+      {
+        "label": "AI Agent Developer",
+        "color_c": "text-blue-600",
+        "color_s": "text-blue-400"
+      },
+      {
+        "label": "Front-End Developer",
+        "color_c": "text-purple-600",
+        "color_s": "text-purple-400"
+      },
+      {
+        "label": "AI & Automation",
+        "color_c": "text-emerald-600",
+        "color_s": "text-emerald-400"
+      }
     ],
     "projects": "View my projects",
     "cv": "Download my resume"
@@ -12,14 +24,14 @@
   "about": {
     "title": "About",
     "subtitle": "I enjoy building modern web applications focused on user comfort and long-term quality.",
-    "description": "I am a third-year Computer Science student at ISPM, following the ESIIA program. I entered the tech field in 2022 and turn ideas into clean, efficient, and intuitive interfaces.\n\nPassionate about front-end development and modern technologies, I pay close attention to user experience, code quality, and application maintainability.\n\nI strongly value design and user experience, as design is often the first impression users have of an application.",
+    "description": "I am a Computer Science student at ISPM in my 3rd year of the ESIIA program. I entered the field of computer science in 2022, and I design solutions combining modern interfaces, artificial intelligence, and business process automation.\n\nPassionate about front-end development, generative artificial intelligence, and modern technologies, I pay close attention to user experience, code quality, and the integration of intelligent assistants capable of improving productivity.\n\nI place great importance on design and user experience, as design is, in my opinion, the first impression a user has of an application. At the same time, I am interested in artificial intelligence and automation; I enjoy designing solutions that combine modern interfaces and intelligent assistants to provide an ever smoother and more efficient experience.",
     "philosophy": {
       "title": "Philosophy",
-      "text": "I believe in clean, structured, and user-oriented development. Every line of code should have a clear purpose: improving experience, performance, and readability."
+      "text": "I believe in clean, structured, and user-oriented development. Every solution, whether it is a web interface or an AI agent, must have a clear objective: to simplify processes, improve the user experience, and bring real business value."
     },
     "skills": {
       "title": "Core Skills",
-      "text": "I specialize in front-end development with React, JavaScript, and Tailwind CSS. I also have experience with C# and WPF, giving me a broader understanding of application development."
+      "text": "I specialize in the development of AI agents and automation solutions integrating LLMs, RAG, APIs, and intelligent workflows. I also have skills in front-end development with React, JavaScript, and Tailwind CSS, which allows me to design complete solutions, from the user experience to the intelligent systems that power them."
     },
     "collaboration": {
       "title": "Collaboration",
@@ -124,6 +136,18 @@
     "role": "Role",
     "aboutProject": "About",
 
+    "mateo": {
+      "description": "Mateo is a conversational AI agent integrated into Materauto's official website to assist visitors.",
+      "about": "Named 'Mateo', this multilange agent is designed for visitors to the Materauto website via the LiveChat module. The project aims to automate customer relations by instantly providing accurate information on available vehicles, technical specifications, news, and recruitment processes. The architecture is based on a RAG (Retrieval-Augmented Generation) approach combining Google language models (Google AI Studio) and a vector database. The data used is primarily Materauto's internal data to ensure reliable, fluid, and contextual answers; the agent also features a web search tool to handle additional questions missing from the spec sheets that require an online search. Its goal is to provide rapid responses to customers and forward potential leads' contact details to managers. This project reduced the initial customer service workload. Automation systems were also implemented for real-time data updates.",
+      "year": "2026",
+      "role": "AI & DevOps Developer / Automation "
+    },
+    "mateo_interne_odoo": {
+      "description": "An AI assistant designed to optimize workflows for Materauto's employees.",
+      "about": "Integrated into Odoo's Discuss module, this agent was specifically built to assist sales agents, warehouse staff, and technicians. The assistant leverages RAG to query internal databases and provide real-time answers regarding spare part references, compatibility and cross-brand parts equivalence, stock distribution, and parts comparison. The project also includes technical maintenance troubleshooting and advice. The infrastructure was highly secured and optimized to efficiently handle complex queries related to the dealership's workflows and boost internal productivity.",
+      "year": "2026",
+      "role": "AI & DevOps Developer / Automation "
+    },
     "carrybot": {
       "description": "CarryBot is an autonomous mobile robot designed for transporting objects.",
       "about": "CarryBot is an academic project aimed at designing an intelligent and innovative solution to automate object transportation using robotics. It combines the development of an autonomous mobile robot and a web application to interact with the system. The main goal is to facilitate transport tasks in controlled environments by leveraging modern technologies such as embedded programming, smart sensors, and web applications. CarryBot can move autonomously, detect and avoid obstacles, while ensuring reliable and safe transport of objects. This project allowed me to apply skills in web development, robotics, and hardware-software integration, working on a complete system from user interface to robot control.",
@@ -175,5 +199,12 @@
   },
   "common": {
     "viewProject": "View Project"
+  },
+  "chat": {
+    "status": "Online",
+    "placeholders": "Type your message...",
+    "reseau_error": "Sorry, I am having trouble connecting to my server. Please try again.",
+    "intro1": "A question about Aurelien ?",
+    "intro2": "Talk with Auré AI"
   }
 }

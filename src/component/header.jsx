@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next"; // <- hook important
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const { i18n } = useTranslation();
-  const [lang, setLang] = useState(i18n.language || "fr"); // valeur initiale
 
-  // Quand la langue change dans i18n, on met à jour l'état
+  const [lang, setLang] = useState(i18n.language || "fr");
+
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+
   useEffect(() => {
     const handleLanguageChanged = (lng) => setLang(lng);
+
     i18n.on("languageChanged", handleLanguageChanged);
 
     return () => {
@@ -15,19 +18,35 @@ const Header = () => {
     };
   }, [i18n]);
 
+  useEffect(() => {
+    const root = document.documentElement;
+
+    if (theme === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    setLang(lng); // met à jour immédiatement le select
+    setLang(lng);
+  };
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
   return (
-    <div className="after flex justify-between sticky top-0 z-50 w-full p-3 md:p-5 backdrop-blur-md shadow-2xl fadeIn">
+    <div className="after flex justify-between sticky top-0 z-50 w-full p-3 md:p-5 backdrop-blur-md shadow-2xl fadeIn bg-white/80 dark:bg-transparent text-slate-800 dark:text-white">
       <div className="flex gap-2 items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="size-10 bg-gray-500 rounded-md p-1 hover:bg-gray-700 transition-all duration-300"
+          className="size-10 bg-slate-200 dark:bg-gray-500 rounded-md p-1 hover:bg-slate-300 dark:hover:bg-gray-700 transition-all duration-300"
         >
           <path
             fillRule="evenodd"
@@ -35,25 +54,36 @@ const Header = () => {
             clipRule="evenodd"
           />
         </svg>
+
         <h1 className="font-semibold text-xl leading-tight">
           Rakotozanaka Aurelien
         </h1>
       </div>
 
-      <select
-        value={lang} // <- important ! lie la valeur à l'état
-        onChange={(e) => changeLanguage(e.target.value)}
-        className="cursor-pointer p-1 outline-1 outline-gray-200 rounded-md"
-        name="language"
-        id="language"
-      >
-        <option className="text-black" value="fr">
-          FR
-        </option>
-        <option className="text-black" value="en">
-          EN
-        </option>
-      </select>
+      <div className="flex items-center gap-3">
+        <button
+          onClick={toggleTheme}
+          className="cursor-pointer h-9 flex justify-center items-center p-1.5 rounded-md outline outline-1 outline-slate-300 dark:outline-gray-200 hover:bg-slate-200 dark:hover:bg-gray-700 transition-all duration-300"
+          title={theme === "dark" ? "Mode clair" : "Mode sombre"}
+        >
+          {theme === "dark" ? "☀️" : "🌙"}
+        </button>
+
+        <select
+          value={lang}
+          onChange={(e) => changeLanguage(e.target.value)}
+          className="cursor-pointer h-9 flex justify-center items-center p-1 rounded-md outline outline-1 outline-slate-300 dark:outline-gray-200 bg-white dark:bg-neutral-800 text-slate-800 dark:text-white"
+          name="language"
+          id="language"
+        >
+          <option className="text-black" value="fr">
+            FR
+          </option>
+          <option className="text-black" value="en">
+            EN
+          </option>
+        </select>
+      </div>
     </div>
   );
 };

@@ -1,33 +1,47 @@
-import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim";
+import { useEffect, useState } from "react";
+
+import Particles from "./particles.jsx";
 
 export default function BackgroundParticles() {
-  const particlesInit = async (engine) => {
-    await loadSlim(engine);
-  };
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setTheme(localStorage.getItem("theme") || "dark");
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const currentParticleColors =
+    theme === "dark"
+      ? ["#ffffff", "#60a5fa", "#a78bfa"]
+      : ["#4f46e5", "#3b82f6", "#6366f1"];
 
   return (
-    <Particles
-      id="tsparticles"
-      init={particlesInit}
-      options={{
-        background: { color: "transparent" },
-        particles: {
-          number: { value: 80 },
-          size: { value: 2 },
-          color: { value: "#3b82f6" },
-          move: { enable: true },
-        },
-      }}
+    <div
       style={{
         position: "absolute",
         top: 0,
         left: 0,
         width: "100%",
         height: "100%",
-        pointerEvents: "none", // pour que les clics passent à travers
+        pointerEvents: "none",
         zIndex: 0,
       }}
-    />
+    >
+      <Particles
+        key={theme}
+        theme={theme}
+        particleColors={currentParticleColors}
+        particleCount={120}
+        particleBaseSize={120}
+      />
+    </div>
   );
 }

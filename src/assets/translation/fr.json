@@ -2,9 +2,21 @@
   "hero": {
     "welcome": "Bienvenue , je suis Aurelien",
     "roles": [
-      { "label": "Développeur Front-End", "color": "text-blue-400" },
-      { "label": "Intégrateur Web", "color": "text-purple-400" },
-      { "label": "Développeur Logiciel", "color": "text-emerald-400" }
+      {
+        "label": "Développeur d'Agents IA",
+        "color_c": "text-blue-600",
+        "color_s": "text-blue-400"
+      },
+      {
+        "label": "Développeur Front-End",
+        "color_c": "text-purple-600",
+        "color_s": "text-purple-400"
+      },
+      {
+        "label": "IA & Automatisation",
+        "color_c": "text-emerald-600",
+        "color_s": "text-purple-400"
+      }
     ],
     "projects": "Voir mes projets",
     "cv": "Télécharger mon CV"
@@ -12,14 +24,14 @@
   "about": {
     "title": "À propos",
     "subtitle": "J'aime créer des applications web modernes, centrées sur le confort de l’utilisateur et pensées pour durer.",
-    "description": "Je suis étudiant en Informatique à l'ISPM en 3ème année du parcours ESIIA. Entré dans le domaine de l'informatique en 2022, je transforme des idées en interfaces claires, performantes et intuitives.\n\nPassionné par le développement front-end et les technologies modernes, j’accorde une attention particulière à l’expérience utilisateur, à la qualité du code et à la maintenabilité des applications.\n\nJ’accorde une grande importance au design et à l’expérience utilisateur, car le design est selon moi la première impression qu’un utilisateur a d’une application.",
+    "description": "Je suis étudiant en Informatique à l'ISPM en 3ème année du parcours ESIIA. Entré dans le domaine de l'informatique en 2022, je conçois des solutions combinant interfaces modernes, intelligence artificielle et automatisation des processus métier.\n\nPassionné par le développement front-end, l'intelligence artificielle générative et les technologies modernes, j'accorde une attention particulière à l'expérience utilisateur, à la qualité du code et à l'intégration d'assistants intelligents capables d'améliorer la productivité.\n\nJ’accorde une grande importance au design et à l’expérience utilisateur, car le design est selon moi la première impression qu’un utilisateur a d’une application. En parallèle, je m’intéresse à l’intelligence artificielle et l’automatisation, j’aime concevoir des solutions qui allient interfaces modernes et assistants intelligents afin d’offrir une expérience toujours plus fluide et efficace.",
     "philosophy": {
       "title": "Philosophie",
-      "text": "Je crois en un développement propre, structuré et orienté utilisateur. Chaque ligne de code doit avoir un objectif clair : améliorer l’expérience, la performance et la lisibilité."
+      "text": "Je crois en un développement propre, structuré et orienté utilisateur. Chaque solution, qu'il s'agisse d'une interface web ou d'un agent IA, doit avoir un objectif clair : simplifier les processus, améliorer l'expérience utilisateur et apporter une réelle valeur métier."
     },
     "skills": {
       "title": "Compétences Focus",
-      "text": "Je me spécialise dans le développement front-end avec React, JavaScript et Tailwind CSS. J’ai également des compétences en C# et WPF, ce qui me permet d’avoir une vision globale du développement applicatif."
+      "text": "Je me spécialise dans le développement d’agents IA et de solutions d’automatisation intégrant les LLM, le RAG, les API et les workflows intelligents. Je possède également des compétences en développement front-end avec React, JavaScript et Tailwind CSS, ce qui me permet de concevoir des solutions complètes, depuis l’expérience utilisateur jusqu’aux systèmes intelligents qui les alimentent."
     },
     "collaboration": {
       "title": "Collaboration",
@@ -124,6 +136,19 @@
     "role": "Rôle",
     "aboutProject": "A propos",
 
+    "mateo": {
+      "description": "Mateo est un agent IA conversationnel intégré au site officiel de Materauto pour assister les visiteurs.",
+      "about": "Nommé 'Mateo', cet agent multilangue est destiné aux visiteurs du site web de Materauto via le module LiveChat . Ce projet vise à automatiser la relation client en fournissant instantanément des informations précises sur les véhicules disponibles, les fiches techniques, les actualités et les processus de recrutement. L'architecture repose sur une approche RAG (Retrieval-Augmented Generation) combinant les modèles de langage de Google (Google AI Studio ) et une base de données vectorielle. Les données utilisées sont principalement les données interne de Materauto pour garantir des réponses fiables, fluides et contextuelles; l'agent dispose aussi d'un outil de recherche web pour répondre à des questions supplementaire absente dans les fiches techniques necessitant une recherche web .Son objectif est de donner des réponses rapidement au client et de transmettre aux responsable les coordonnées des clients potentiels. Ce projet a permit la reduction de la charge de travail du service client initial.Des systèmes d'automatisation ont été mis en place pour la mis-à-jours des données. ",
+      "year": "2026",
+      "role": "Développeur IA & DevOps / automatisation"
+    },
+    "mateo_interne_odoo": {
+      "description": "C'est un assistant IA conçus pour optimiser les flux de travail des collaborateurs de Materauto.",
+      "about": "Integré dans le module Discussion d'Odoo, cet agent a été conçu spécifiquement pour assister les agents de vente, les magasiniers et les techniciens. Cet assistant exploite le RAG pour interroger les bases de données internes et fournir des réponses en temps réel sur les références de pièces de rechange, la compatibilité et les équivalences de pièces entre marques, la repartition des stocks et la comparaison de pièce. Le projet inclut également  des conseils de maintenance technique .L'infrastructure a été hautement sécurisée et optimisée pour gérer efficacement les requêtes complexes liées aux workflows de la concession et améliorer la productivité interne.",
+      "year": "2026",
+      "role": "Développeur IA & DevOps / automatisation"
+    },
+
     "carrybot": {
       "description": "CarryBot est un robot mobile autonome conçu pour le transport d’objets.",
       "about": "CarryBot est un projet académique visant à concevoir une solution intelligente et innovante pour automatiser le transport d’objets grâce à la robotique. Il combine le développement d’un robot mobile autonome et d’une application web permettant d’interagir avec le système.Le projet a pour objectif principal de faciliter les tâches de transport en milieu contrôlé en exploitant des technologies modernes telles que la programmation embarquée, les capteurs intelligents et les applications web.CarryBot est capable de se déplacer de manière autonome, de détecter et d’éviter les obstacles, tout en assurant un transport fiable et sécurisé des objets. Ce projet m’a permis de mettre en pratique des compétences en développement web, en robotique et en intégration matériel–logiciel, tout en travaillant sur un système complet allant de l’interface utilisateur jusqu’au contrôle du robot.",
@@ -175,5 +200,12 @@
   },
   "common": {
     "viewProject": "Voir le projet"
+  },
+  "chat": {
+    "status": "En ligne",
+    "placeholders": "Écrivez votre message...",
+    "reseau_error": "Désolé, je rencontre des difficultés à me connecter à mon serveur. Veuillez réessayer.",
+    "intro1": "Une question sur Aurelien ?",
+    "intro2": "Discutez avec Auré AI"
   }
 }

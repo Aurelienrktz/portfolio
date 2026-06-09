@@ -11,46 +11,54 @@ const Projets = () => {
   return (
     <div
       id="projet"
-      className="py-10 px-5 md:px-20 md:pb-20 md:pt-15 flex flex-col justify-center"
+      className="py-10 px-5 md:px-20 md:pb-20 md:pt-15 flex flex-col justify-center bg-transparent text-gray-900 dark:text-white"
     >
       <h1 className="after3 relative font-bold pb-2 md:pb-5 mb-5 md:mb-10 text-xl md:text-2xl text-center fadeIn">
         {t("projects.sectionTitle")}
       </h1>
+
       <div className="flex flex-col md:flex-row gap-15 flex-wrap justify-center items-center">
         {ListeProjets.map((value, index) => (
           <div
             key={index}
-            className={`w-10/12 md:w-[30%] bg-black/30 flex flex-col rounded-3xl ${
+            className={`w-10/12 md:w-[30%] h-[550px] flex flex-col rounded-3xl transition-all duration-300 ${"bg-gray-200 border border-slate-300/70 shadow-[0_4px_20px_rgba(0,0,0,0.08),_0_20px_50px_rgba(15,23,42,0.18)] dark:border-transparent dark:shadow-none dark:bg-black/30"} ${
               index % 2 === 0 ? "fadeIn3" : "fadeIn2"
             }`}
           >
             <img
-              className="w-full h-[250px] object-contain rounded-t-3xl"
+              className="w-full h-1/3 object-contain rounded-t-3xl"
               src={value.img[0]}
               alt={`capture ${value.titre}`}
             />
-            <div className="after4 relative flex flex-col gap-6 pt-3 px-3 pb-6 md:px-6 md:pb-12">
+
+            <div className="after4 relative flex flex-col flex-1 gap-6 pt-3 px-3 pb-6 md:px-6">
               <div className="flex gap-3 items-center flex-wrap">
                 {value.tech.map((tech, i) => (
                   <h1
                     key={i}
-                    className="bg-gray-800 p-2 md:p-3 rounded-3xl hover:bg-gray-900 transition-all duration-300 hover:-translate-y-1.5"
+                    className="bg-white/80 backdrop-blur-sm text-indigo-600 border border-indigo-100 font-medium text-xs md:text-sm p-2 md:px-3 md:py-1.5 rounded-3xl transition-all duration-300 hover:-translate-y-1 hover:bg-slate-300/80 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-900"
                   >
                     {tech}
                   </h1>
                 ))}
               </div>
-              <h1 className="font-bold text-xl md:text-3xl">{value.titre}</h1>
-              <p className="text-gray-400">
+
+              {/* 🌟 TITRE : text-slate-800 (un anthracite profond, moins agressif que le noir pur) */}
+              <h1 className="font-bold text-xl md:text-3xl text-slate-800 dark:text-white transition-colors">
+                {value.titre}
+              </h1>
+
+              <p className="text-slate-600 dark:text-gray-400 flex-1 overflow-hidden">
                 {t(`projects.${value.id}.description`)}
               </p>
             </div>
+
             <button
               onClick={() => {
                 setProjet(value);
                 setIsOpen(true);
               }}
-              className="flex gap-2 items-center text-lg text-pink-500 p-3 md:p-6 cursor-pointer"
+              className="mt-auto flex gap-2 items-center text-lg text-pink-500 p-3 md:p-6 cursor-pointer"
             >
               {t("common.viewProject")}
               <svg

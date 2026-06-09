@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Renderer, Camera, Geometry, Program, Mesh } from "ogl";
 
-const defaultColors = ["#ffffff", "#ffffff", "#ffffff"];
+const defaultColors = ["#ffffff", "#60a5fa", "#a78bfa"];
 
 const hexToRgb = (hex) => {
   hex = hex.replace(/^#/, "");
@@ -59,7 +59,7 @@ const vertex = /* glsl */ `
   }
 `;
 
-const fragment = /* glsl */ `
+const fragment =`
   precision highp float;
   
   uniform float uTime;
@@ -97,6 +97,7 @@ const Particles = ({
   disableRotation = false,
   pixelRatio = 1,
   className,
+  theme, 
 }) => {
   const containerRef = useRef(null);
   const mouseRef = useRef({ x: 0, y: 0 });
@@ -110,9 +111,13 @@ const Particles = ({
       depth: false,
       alpha: true,
     });
+
     const gl = renderer.gl;
     container.appendChild(gl.canvas);
-    gl.clearColor(0, 0, 0, 0);
+
+    if (theme === "dark") {
+      gl.clearColor(0, 0, 0, 0);
+    } 
 
     const camera = new Camera(gl, { fov: 15 });
     camera.position.set(0, 0, cameraDistance);
@@ -123,6 +128,7 @@ const Particles = ({
       renderer.setSize(width, height);
       camera.perspective({ aspect: gl.canvas.width / gl.canvas.height });
     };
+
     window.addEventListener("resize", resize, false);
     resize();
 
@@ -141,6 +147,7 @@ const Particles = ({
     const positions = new Float32Array(count * 3);
     const randoms = new Float32Array(count * 4);
     const colors = new Float32Array(count * 3);
+
     const palette =
       particleColors && particleColors.length > 0
         ? particleColors
@@ -154,13 +161,17 @@ const Particles = ({
         z = Math.random() * 2 - 1;
         len = x * x + y * y + z * z;
       } while (len > 1 || len === 0);
+
       const r = Math.cbrt(Math.random());
+
       positions.set([x * r, y * r, z * r], i * 3);
       randoms.set(
         [Math.random(), Math.random(), Math.random(), Math.random()],
         i * 4
       );
+
       const col = hexToRgb(palette[Math.floor(Math.random() * palette.length)]);
+
       colors.set(col, i * 3);
     }
 
@@ -192,6 +203,7 @@ const Particles = ({
 
     const update = (t) => {
       animationFrameId = requestAnimationFrame(update);
+
       const delta = t - lastTime;
       lastTime = t;
       elapsed += delta * speed;
@@ -227,8 +239,9 @@ const Particles = ({
         container.removeChild(gl.canvas);
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
+    theme,
+    particleColors,
     particleCount,
     particleSpread,
     speed,
